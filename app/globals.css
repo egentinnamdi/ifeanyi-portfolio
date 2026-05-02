@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #050c14;
+  --bg2: #081018;
+  --surface: #0d1f2d;
+  --accent: #00ffe0;
+  --accent2: #0099ff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #050c14;
+  color: #e8f4f8;
+  font-family: "Syne", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Grid background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 255, 224, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 224, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  /* background-repeat: no-repeat; */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #050c14;
+}
+::-webkit-scrollbar-thumb {
+  background: #00ffe0;
+  border-radius: 2px;
+}
+
+/* Clip-path utilities */
+.clip-corner-sm {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 12px) 0,
+    100% 12px,
+    100% 100%,
+    12px 100%,
+    0 calc(100% - 12px)
+  );
+}
+
+.clip-corner-md {
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+}
+
+.clip-corner-lg {
+  clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 0 100%);
+}
+
+.clip-corner-both {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 20px) 0,
+    100% 20px,
+    100% 100%,
+    20px 100%,
+    0 calc(100% - 20px)
+  );
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #00ffe0, #0099ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Fade-in animation class for intersection observer */
+.fade-in-hidden {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
