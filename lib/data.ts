@@ -27,7 +27,7 @@ export const ABOUT_INFO = [
 
 export interface Skill {
   name: string;
-  score: string;
+  score?: string;
 }
 
 export const SKILLS: Skill[] = [
@@ -49,6 +49,10 @@ export const SKILLS: Skill[] = [
   { name: "Bash Scripting & Automation", score: "●" },
   { name: "Kali Linux / VirtualBox", score: "●" },
   { name: "Python Programming", score: "In Progress" },
+  { name: "WAF evasion" },
+  { name: "Penetration testing" },
+  { name: "Vulnerability assessment" },
+  { name: "SQLi" },
 ];
 
 export interface Project {
@@ -65,9 +69,27 @@ export const PROJECTS: Project[] = [
   {
     num: "PROJECT // 001",
     title: "Storage Drive Forensic Recovery Tool v2.2",
-    tech: ["Kali Linux", "Bash Scripting", "PhotoRec", "Foremost", "TestDisk", "VirtualBox"],
+    tech: [
+      "Kali Linux",
+      "Bash Scripting",
+      "PhotoRec",
+      "Foremost",
+      "TestDisk",
+      "VirtualBox",
+    ],
     description:
       "Developed and deployed an automated forensic recovery tool to recover lost data from a reformatted USB flash drive. The project involved mounting the drive in a Kali Linux virtual environment, performing file carving using Foremost and PhotoRec, and recovering both photos and large MOV video files. The entire workflow was packaged into a reusable Bash automation script to streamline future forensic recovery operations.",
+    outcome:
+      "Successfully recovered photos and large MOV video files from a fully reformatted storage device. Published as open-source on GitHub, demonstrating real-world forensic investigation capability beyond coursework.",
+    link: "https://github.com/IFEANYI-EGENTI/Recovery_Tool_v2.2",
+    linkLabel: "View on GitHub →",
+  },
+  {
+    num: "PROJECT // 002",
+    title: "Web Application Security CTF Challenge — CTF205",
+    tech: ["SQLMap", "Burp Suite", "curl", "Kali Linux", "Base64 Decoding"],
+    description:
+      "Conducted a penetration test against a WAF-protected government login portal (pension.nasarawastate.gov.ng) as part of a structured CTF assessment. Identified a time-based blind SQL injection vulnerability in the username parameter through manual reconnaissance and payload crafting. Pivoted from automated SQLMap attacks — blocked by WAF/IPS returning HTTP 406/508 — to manual injection via Burp Suite Repeater, successfully confirming the backend database name and DBMS (MySQL/MariaDB). Decoded Base64-encoded HTML hints to capture the first flag.",
     outcome:
       "Successfully recovered photos and large MOV video files from a fully reformatted storage device. Published as open-source on GitHub, demonstrating real-world forensic investigation capability beyond coursework.",
     link: "https://github.com/IFEANYI-EGENTI/Recovery_Tool_v2.2",
@@ -97,7 +119,7 @@ export const CERTS: Cert[] = [
   {
     badge: "Foundation",
     title: "TechyJaunt Beginner Course in Cybersecurity",
-    org: "TechyJaunt (Osun State Community)",
+    org: "TechyJaunt",
     date: "Completed: May 2025 · Issued: June 2025",
     description:
       "Completed a beginner-level cybersecurity training program held between January 2025 and May 2025, covering foundational concepts in cybersecurity. This was the starting point of my cybersecurity journey — the foundation that led to full certification at ICDFA with High Distinction.",
@@ -124,7 +146,14 @@ export const EXPERIENCES: Experience[] = [
     period: "Mar 2025 — Apr 2026",
     description:
       "Underwent intensive hands-on training covering web application security testing, digital forensics investigation, and real-world attack/defense scenarios. Applied skills through practical assessments simulating professional cybersecurity environments. Awarded High Distinction with a CSPA of 4.91 — the highest score across Batch A2025 cohort of 49 students.",
-    tags: ["Web App Security", "Digital Forensics", "Vulnerability Assessment", "Incident Response", "Cloud Security", "Mobile/IoT Forensics"],
+    tags: [
+      "Web App Security",
+      "Digital Forensics",
+      "Vulnerability Assessment",
+      "Incident Response",
+      "Cloud Security",
+      "Mobile/IoT Forensics",
+    ],
   },
   {
     role: "Webinar Moderator & Community Development Lead",
@@ -133,7 +162,14 @@ export const EXPERIENCES: Experience[] = [
     period: "April 2026",
     description:
       "Served as Moderator and primary organiser for a virtual cybersecurity awareness webinar attended by approximately 35 community members. Led the full session covering Account Takeover, Cyberbullying, and Social Engineering — using real-life Nigerian scenarios to make technical content accessible to a non-technical audience. Responsibilities spanned the full project lifecycle: co-researching the Account Takeover topic, drafting the community feedback form, conducting post-event data analysis, and authoring the final 37-page impact report. Post-presentation summaries delivered during the live session were specifically commended by attendees as a standout technique. The event achieved a 4.8/5 quality rating, 100% organisational satisfaction, and 100% knowledge-sharing intent — with an estimated community reach of 245–350 people.",
-    tags: ["Event Moderation", "Community Education", "Incident Response Awareness", "Data Analysis", "Public Communication", "Cybersecurity Outreach"],
+    tags: [
+      "Event Moderation",
+      "Community Education",
+      "Incident Response Awareness",
+      "Data Analysis",
+      "Public Communication",
+      "Cybersecurity Outreach",
+    ],
     link: "https://drive.google.com/file/d/1qxj3WNqjPkwo6gcWpm54mOL62bton2I5/view?usp=sharing",
     linkLabel: "▶ Watch Session Recording →",
   },
@@ -160,7 +196,8 @@ export const EDUCATION: Education[] = [
     period: "Mar 2025 — Apr 2026",
     degree: "Professional Training Certificate",
     field: "Web Application Security and Digital Forensics",
-    institution: "International Cybersecurity & Digital Forensics Academy (ICDFA)",
+    institution:
+      "International Cybersecurity & Digital Forensics Academy (ICDFA)",
     description:
       "Completed a 12-month intensive structured training program. Graduated with High Distinction — CSPA 4.91, highest in Batch A2025 cohort of 49 students. Training included two capstone projects in web application security and digital forensics investigations.",
   },

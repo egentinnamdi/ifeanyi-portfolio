@@ -5,7 +5,10 @@ import { cn } from "@/lib/utils";
 
 export function AboutSection() {
   return (
-    <section id="about" className="relative z-10 py-24 px-10 max-w-[1200px] mx-auto">
+    <section
+      id="about"
+      className="relative z-10 py-24 px-10 max-w-[1200px] mx-auto"
+    >
       <FadeIn>
         <SectionHeader num="01" title="About Me" />
       </FadeIn>
@@ -14,20 +17,27 @@ export function AboutSection() {
         {/* Text */}
         <FadeIn className="text-base text-text2 leading-[1.9] space-y-5">
           <p>
-            Certified cybersecurity professional specializing in Web Application Security and
-            Digital Forensics. Graduated with High Distinction (CSPA 4.91 — highest in Batch
-            A2025) from the International Cybersecurity and Digital Forensics Academy (ICDFA),
+            Certified associate cybersecurity professional specializing in Web
+            Application Security and Digital Forensics. Graduated with High
+            Distinction (CSPA 4.91 — highest in Batch A2025) from the
+            International Cybersecurity and Digital Forensics Academy (ICDFA),
             completing 89 skill units across rigorous hands-on training.
           </p>
           <p>
-            Beyond the classroom, I build real-world tools and document practical projects —
-            including a forensic data recovery tool published on GitHub. Driven by a hands-on
-            approach to security: if I can't test it, I haven't learned it.
+            Beyond the classroom, I build real-world tools and actively test
+            against live targets. My work includes a forensic data recovery tool
+            published on GitHub and a CTF engagement where I identified and
+            partially exploited a time-based blind SQL injection vulnerability
+            in a WAF-protected government portal — pivoting from automated tools
+            to manual Burp Suite techniques when the WAF blocked SQLMap. Driven
+            by a hands-on approach to security: if I can't test it, I haven't
+            learned it.
           </p>
           <p>
-            Currently pursuing a B.Eng. in Electronics and Computer Engineering at the
-            University of Nigeria, while simultaneously expanding into Python programming
-            through GOMYCODE to strengthen security tooling and scripting capabilities.
+            Currently pursuing a B.Eng. in Electronics and Computer Engineering
+            at the University of Nigeria, while simultaneously expanding into
+            Python programming through GOMYCODE to strengthen security tooling
+            and scripting capabilities.
           </p>
         </FadeIn>
 
@@ -48,7 +58,7 @@ export function AboutSection() {
                 <span
                   className={cn(
                     "font-semibold text-right",
-                    row.accent ? "text-accent" : "text-text1"
+                    row.accent ? "text-accent" : "text-text1",
                   )}
                 >
                   {row.value}

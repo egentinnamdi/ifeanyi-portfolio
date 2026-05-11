@@ -1,9 +1,22 @@
 import { HERO_STATS } from "@/lib/data";
+import Image from "next/image";
+import { FadeIn } from "./FadeIn";
 
 export function HeroSection() {
   return (
-    <div className="relative z-10">
-      <div className="relative min-h-screen flex items-center px-10 pt-[120px] pb-20 max-w-[1200px] mx-auto">
+    <div className="relative flex flex-col lg:flex-row gap-10 py-20 lg:py-0  z-10">
+      <div className=" lg:w-2/4 grid bg-[radial-gradient(circle_at_center,#00ffe033_0%,transparent_70%)]    place-items-center">
+        <FadeIn className="lg:size-3/5 size-11/12  lg:border-4 border-[#00ffe080] lg:rounded-tr-full rounded-xl  lg:rounded-tl-full lg:rounded-br-full">
+          <Image
+            src="/images/profile.jpeg"
+            alt="profile"
+            width={500}
+            height={500}
+            className="size-full object-cover lg:rounded-tl-full lg:rounded-tr-full rounded-xl lg:rounded-br-full"
+          />
+        </FadeIn>
+      </div>
+      <div className="relative lg:min-h-screen px-10 flex items-center lg:pt-[120px] lg:pb-20 max-w-[1200px] mx-auto">
         <div className="max-w-[720px]">
           {/* Tag */}
           <div className="flex items-center gap-3 font-mono text-[11px] text-accent tracking-[3px] uppercase mb-6">
@@ -12,11 +25,11 @@ export function HeroSection() {
           </div>
 
           {/* Name */}
-          <h1 className="text-[clamp(42px,7vw,80px)] font-extrabold leading-[1.05] tracking-[-2px] mb-4 text-text1">
+          <h2 className="text-[clamp(42px,4vw,80px)] text-2xl font-extrabold leading-[1.05] tracking-[-2px] mb-4 text-text1">
             Ifeanyi
             <br />
             <span className="gradient-text">David Egenti</span>
-          </h1>
+          </h2>
 
           {/* Subtitle */}
           <p className="text-lg text-text2 font-normal mb-8">
@@ -24,10 +37,11 @@ export function HeroSection() {
           </p>
 
           {/* Description */}
-          <p className="text-base text-text2 leading-[1.8] mb-12 max-w-[580px]">
-            Hands-on cybersecurity professional specializing in web application security
-            testing, digital forensics investigation, and security tooling. Graduated High
-            Distinction from ICDFA — highest CSPA in Batch A2025.
+          <p className="lg:text-base text-text2 leading-[1.8] text-sm mb-12 max-w-[580px]">
+            Hands-on associate cybersecurity professional (ICDFA) specializing
+            in web application security testing, digital forensics
+            investigation, and security tooling. Graduated High Distinction from
+            ICDFA — highest CSPA in Batch A2025.
           </p>
 
           {/* Stats */}

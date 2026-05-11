@@ -4,7 +4,10 @@ import { CONTACT_ITEMS } from "@/lib/data";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="relative z-10 py-24 px-10 max-w-[1200px] mx-auto">
+    <section
+      id="contact"
+      className="relative z-10 py-24 px-10 max-w-[1200px] mx-auto"
+    >
       <FadeIn>
         <SectionHeader num="07" title="Get In Touch" />
       </FadeIn>
@@ -13,18 +16,22 @@ export function ContactSection() {
         {/* Left: intro + banner */}
         <FadeIn>
           <p className="text-base text-text2 leading-[1.8] mb-10">
-            Open to cybersecurity roles, collaborations, and opportunities. Whether you're a
-            recruiter, fellow practitioner, or someone who wants to talk security — reach out.
+            Open to cybersecurity roles, collaborations, and opportunities.
+            Whether you're a recruiter, fellow practitioner, or someone who
+            wants to talk security — reach out.
           </p>
 
           <div className="clip-corner-md bg-gradient-to-br from-[rgba(0,255,224,0.08)] to-[rgba(0,153,255,0.08)] border border-[rgba(0,255,224,0.12)] p-10">
             <h3 className="text-[28px] font-extrabold tracking-tight mb-2 text-text1">
               High Distinction
               <br />
-              <span className="gradient-text">CSPA 4.91 · #1 in Batch A2025</span>
+              <span className="gradient-text">
+                CSPA 4.91 · #1 in Batch A2025
+              </span>
             </h3>
             <p className="text-sm text-text2 leading-[1.6] mt-3">
-              Certified in Web Application Security & Digital Forensics · ICDFA · April 2026
+              Certified in Web Application Security & Digital Forensics · ICDFA
+              · April 2026
             </p>
           </div>
         </FadeIn>
@@ -47,7 +54,9 @@ export function ContactSection() {
                   <div className="font-mono text-[10px] text-text3 tracking-widest uppercase mb-0.5">
                     {item.label}
                   </div>
-                  <div className="text-sm text-text1 font-semibold">{item.value}</div>
+                  <div className="text-xs lg:text-sm text-text1  font-semibold">
+                    {item.value}
+                  </div>
                 </div>
               </a>
             ))}

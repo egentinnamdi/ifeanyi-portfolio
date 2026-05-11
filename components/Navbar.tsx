@@ -25,7 +25,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-5 bg-[rgba(5,12,20,0.85)] backdrop-blur-xl border-b border-[rgba(0,255,224,0.12)]">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-10 h-[10vh] py-10 bg-[rgba(5,12,20,0.85)] backdrop-blur-xl border-b border-[rgba(0,255,224,0.12)]">
       <div className="font-mono text-[13px] text-accent tracking-widest uppercase">
         IDE // Portfolio
       </div>
@@ -36,7 +36,9 @@ export function Navbar() {
               href={link.href}
               className={cn(
                 "font-mono text-[11px] tracking-widest uppercase transition-colors duration-200",
-                active === link.href.slice(1) ? "text-accent" : "text-text2 hover:text-accent"
+                active === link.href.slice(1)
+                  ? "text-accent"
+                  : "text-text2 hover:text-accent",
               )}
             >
               {link.label}
