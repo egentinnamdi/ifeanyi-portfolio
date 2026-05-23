@@ -61,8 +61,8 @@ export interface Project {
   tech: string[];
   description: string;
   outcome: string;
-  link: string;
-  linkLabel: string;
+  link?: string;
+  linkLabel?: string;
 }
 
 export const PROJECTS: Project[] = [
@@ -91,9 +91,7 @@ export const PROJECTS: Project[] = [
     description:
       "Conducted a penetration test against a WAF-protected government login portal (pension.nasarawastate.gov.ng) as part of a structured CTF assessment. Identified a time-based blind SQL injection vulnerability in the username parameter through manual reconnaissance and payload crafting. Pivoted from automated SQLMap attacks — blocked by WAF/IPS returning HTTP 406/508 — to manual injection via Burp Suite Repeater, successfully confirming the backend database name and DBMS (MySQL/MariaDB). Decoded Base64-encoded HTML hints to capture the first flag.",
     outcome:
-      "Successfully recovered photos and large MOV video files from a fully reformatted storage device. Published as open-source on GitHub, demonstrating real-world forensic investigation capability beyond coursework.",
-    link: "https://github.com/IFEANYI-EGENTI/Recovery_Tool_v2.2",
-    linkLabel: "View on GitHub →",
+      "Successfully identified and partially exploited a live SQLi vulnerability in a hardened environment, demonstrating WAF evasion, manual payload crafting, and offensive security adaptability.",
   },
 ];
 
@@ -142,7 +140,7 @@ export const EXPERIENCES: Experience[] = [
   {
     role: "Apprentice — Web Application Security & Digital Forensics",
     org: "International Cybersecurity & Digital Forensics Academy (ICDFA)",
-    sub: "School of Basic Vocational Training (SVT) · Nasarawa State, Nigeria",
+    sub: "School of Basic Vocational Training (SVT) · Remote",
     period: "Mar 2025 — Apr 2026",
     description:
       "Underwent intensive hands-on training covering web application security testing, digital forensics investigation, and real-world attack/defense scenarios. Applied skills through practical assessments simulating professional cybersecurity environments. Awarded High Distinction with a CSPA of 4.91 — the highest score across Batch A2025 cohort of 49 students.",
@@ -231,9 +229,9 @@ export const CONTACT_ITEMS = [
     href: "https://www.linkedin.com/in/ifeanyi-egenti-4671ba32b",
   },
   {
-    icon: "𝕏",
+    icon: "X",
     label: "X (Twitter)",
-    value: "@OnyeDot69",
-    href: "https://x.com/OnyeDot69",
+    value: "@PROJECT_IFEANYI",
+    href: "https://x.com/PROJECT_IFEANYI",
   },
 ];

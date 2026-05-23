@@ -4,15 +4,15 @@ import { FadeIn } from "./FadeIn";
 
 export function HeroSection() {
   return (
-    <div className="relative flex flex-col lg:flex-row gap-10 py-20 lg:py-0  z-10">
-      <div className=" lg:w-2/4 grid bg-[radial-gradient(circle_at_center,#00ffe033_0%,transparent_70%)]    place-items-center">
-        <FadeIn className="lg:size-3/5 size-11/12  lg:border-4 border-[#00ffe080] lg:rounded-tr-full rounded-xl  lg:rounded-tl-full lg:rounded-br-full">
+    <div className="relative flex flex-col lg:flex-row gap-5 lg:gap-10 py-20 lg:py-0  z-10">
+      <div className=" lg:w-2/4 grid bg-[radial-gradient(circle_at_center,#00ffe033_0%,transparent_70%)] place-items-center">
+        <FadeIn className="lg:size-3/5 overflow-hidden size-5/6 [border-radius:30%_70%_70%_30%/30%_30%_70%_70%] lg:ml-24 ring-4 ring-offset-[#0099ff]/25 ring-offset-4 ring-[#00ffe080]">
           <Image
             src="/images/profile.jpeg"
             alt="profile"
             width={500}
             height={500}
-            className="size-full object-cover lg:rounded-tl-full lg:rounded-tr-full rounded-xl lg:rounded-br-full"
+            className="size-full object-cover   "
           />
         </FadeIn>
       </div>
@@ -61,10 +61,10 @@ export function HeroSection() {
           {/* Buttons */}
           <div className="flex gap-4 flex-wrap">
             <a
-              href="#projects"
+              href="/cv.pdf"
               className="clip-corner-sm px-8 py-[14px] bg-accent text-bg font-mono text-[12px] font-bold tracking-[2px] uppercase transition-all duration-200 hover:bg-accent2 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,153,255,0.3)]"
             >
-              View Projects
+              View Resume
             </a>
             <a
               href="#contact"
