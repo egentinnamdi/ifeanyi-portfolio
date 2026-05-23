@@ -4,8 +4,8 @@ import { SKILLS } from "@/lib/data";
 
 export function SkillsSection() {
   return (
-    <div className="bg-bg2 py-24" id="skills">
-      <div className="max-w-[1200px] mx-auto px-10">
+    <div className="bg-bg2 " id="skills">
+      <div className="max-w-[1200px] mx-auto">
         <FadeIn>
           <SectionHeader num="02" title="Skills & Competencies" />
         </FadeIn>

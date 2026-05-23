@@ -4,9 +4,9 @@ import { FadeIn } from "./FadeIn";
 
 export function HeroSection() {
   return (
-    <div className="relative flex flex-col lg:flex-row gap-5 lg:gap-10 py-20 lg:py-0  z-10">
+    <div className="relative flex flex-col lg:flex-row gap-10 pt-28 lg:pt-0 z-10">
       <div className=" lg:w-2/4 grid bg-[radial-gradient(circle_at_center,#00ffe033_0%,transparent_70%)] place-items-center">
-        <FadeIn className="lg:size-3/5 overflow-hidden size-5/6 [border-radius:30%_70%_70%_30%/30%_30%_70%_70%] lg:ml-24 ring-4 ring-offset-[#0099ff]/25 ring-offset-4 ring-[#00ffe080]">
+        <FadeIn className="lg:size-3/5 overflow-hidden w-full h-11/12 rounded-3xl   lg:[border-radius:30%_70%_70%_30%/30%_30%_70%_70%] lg:ml-24 lg:ring-4 ring-offset-[#0099ff]/25 ring-offset-4 ring-[#00ffe080]">
           <Image
             src="/images/profile.jpeg"
             alt="profile"
@@ -16,8 +16,8 @@ export function HeroSection() {
           />
         </FadeIn>
       </div>
-      <div className="relative lg:min-h-screen px-10 flex items-center lg:pt-[120px] lg:pb-20 max-w-[1200px] mx-auto">
-        <div className="max-w-[720px]">
+      <div className="relative lg:min-h-screen  lg:px-10 flex items-center lg:pt-[120px] lg:pb-20  mx-auto">
+        <div>
           {/* Tag */}
           <div className="flex items-center gap-3 font-mono text-[11px] text-accent tracking-[3px] uppercase mb-6">
             <span className="w-10 h-px bg-accent" />
@@ -25,9 +25,8 @@ export function HeroSection() {
           </div>
 
           {/* Name */}
-          <h2 className="text-[clamp(42px,4vw,80px)] text-2xl font-extrabold leading-[1.05] tracking-[-2px] mb-4 text-text1">
-            Ifeanyi
-            <br />
+          <h2 className="text-[clamp(35px,4vw,80px)] leading-tight   text-2xl font-extrabold lg:leading-[1.05] tracking-[-2px] mb-4 text-text1">
+            Ifeanyi <br className="hidden lg:block" />
             <span className="gradient-text">David Egenti</span>
           </h2>
 

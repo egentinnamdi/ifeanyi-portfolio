@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className=" overflow-hidden">
+      <main className=" space-y-16 px-5 lg:px-10 lg:space-y-24 overflow-hidden">
         <HeroSection />
         <ObjectiveSection />
         <AboutSection />

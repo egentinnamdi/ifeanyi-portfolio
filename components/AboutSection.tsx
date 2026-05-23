@@ -5,10 +5,7 @@ import { cn } from "@/lib/utils";
 
 export function AboutSection() {
   return (
-    <section
-      id="about"
-      className="relative z-10 py-24 px-10 max-w-[1200px] mx-auto"
-    >
+    <section id="about" className="relative z-10 max-w-[1200px] mx-auto">
       <FadeIn>
         <SectionHeader num="01" title="About Me" />
       </FadeIn>

@@ -8,7 +8,7 @@ interface SectionHeaderProps {
 
 export function SectionHeader({ num, title, className }: SectionHeaderProps) {
   return (
-    <div className={cn("flex items-center gap-5 mb-14", className)}>
+    <div className={cn("flex items-center gap-5 mb-7 lg:mb-14", className)}>
       <span className="font-mono text-[11px] text-accent tracking-widest">
         {num}
       </span>

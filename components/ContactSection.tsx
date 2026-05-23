@@ -4,10 +4,7 @@ import { CONTACT_ITEMS } from "@/lib/data";
 
 export function ContactSection() {
   return (
-    <section
-      id="contact"
-      className="relative z-10 py-24 px-10 max-w-[1200px] mx-auto"
-    >
+    <section id="contact" className="relative z-10 max-w-[1200px] mx-auto">
       <FadeIn>
         <SectionHeader num="07" title="Get In Touch" />
       </FadeIn>

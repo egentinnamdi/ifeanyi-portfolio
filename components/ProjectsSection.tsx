@@ -4,7 +4,7 @@ import { PROJECTS } from "@/lib/data";
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="relative z-10 py-24 px-10 max-w-[1200px] mx-auto">
+    <section id="projects" className="relative z-10 max-w-[1200px] mx-auto">
       <FadeIn>
         <SectionHeader num="03" title="Projects" />
       </FadeIn>
@@ -12,7 +12,7 @@ export function ProjectsSection() {
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
         {PROJECTS.map((project, i) => (
           <FadeIn key={project.num} delay={i * 80}>
-            <div className="group relative clip-corner-lg bg-surface border border-[rgba(0,255,224,0.12)] p-10 transition-all duration-300 hover:border-[rgba(0,255,224,0.3)] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(0,255,224,0.15)] overflow-hidden">
+            <div className="group relative clip-corner-lg bg-surface border border-[rgba(0,255,224,0.12)] lg:p-10 px-5 py-7 transition-all duration-300 hover:border-[rgba(0,255,224,0.3)] hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(0,255,224,0.15)] overflow-hidden">
               {/* Top gradient bar */}
               <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-accent to-accent2 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
 
@@ -35,7 +35,9 @@ export function ProjectsSection() {
                 ))}
               </div>
 
-              <p className="text-sm text-text2 leading-[1.8] mb-5">{project.description}</p>
+              <p className="text-sm text-text2 leading-[1.8] mb-5">
+                {project.description}
+              </p>
 
               {/* Outcome */}
               <div className="px-4 py-4 bg-[rgba(0,255,224,0.04)] border-l-2 border-accent text-sm text-text2 leading-[1.7] mb-6">
