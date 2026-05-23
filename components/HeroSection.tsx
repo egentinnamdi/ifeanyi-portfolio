@@ -4,9 +4,9 @@ import { FadeIn } from "./FadeIn";
 
 export function HeroSection() {
   return (
-    <div className="relative flex flex-col lg:flex-row gap-10 pt-28 lg:pt-0 z-10">
-      <div className=" lg:w-2/4 grid bg-[radial-gradient(circle_at_center,#00ffe033_0%,transparent_70%)] place-items-center">
-        <FadeIn className="lg:size-3/5 overflow-hidden w-full h-11/12 rounded-3xl   lg:[border-radius:30%_70%_70%_30%/30%_30%_70%_70%] lg:ml-24 lg:ring-4 ring-offset-[#0099ff]/25 ring-offset-4 ring-[#00ffe080]">
+    <div className="relative flex flex-col lg:flex-row gap-5 lg:gap-10 pt-10  lg:pt-0 z-10">
+      <div className="lg:w-2/4 grid bg-[radial-gradient(circle_at_center,#00ffe033_0%,transparent_70%)] lg:place-items-center items-end">
+        <FadeIn className="lg:size-3/5 overflow-hidden w-full h-5/6 rounded-3xl   lg:[border-radius:30%_70%_70%_30%/30%_30%_70%_70%] lg:ml-24 lg:ring-4 ring-offset-[#0099ff]/25 ring-offset-4 ring-[#00ffe080]">
           <Image
             src="/images/profile.jpeg"
             alt="profile"
@@ -16,7 +16,7 @@ export function HeroSection() {
           />
         </FadeIn>
       </div>
-      <div className="relative lg:min-h-screen  lg:px-10 flex items-center lg:pt-[120px] lg:pb-20  mx-auto">
+      <div className="relative lg:min-h-screen  lg:px-10 flex items-center lg:pt-[120px] lg:pb-20 mt-3  mx-auto">
         <div>
           {/* Tag */}
           <div className="flex items-center gap-3 font-mono text-[11px] text-accent tracking-[3px] uppercase mb-6">
